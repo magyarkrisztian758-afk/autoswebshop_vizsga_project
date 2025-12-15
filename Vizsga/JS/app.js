@@ -106,6 +106,11 @@ function mountEvents() {
   const closeCart = document.getElementById("closeCart");
   const clearCartBtn = document.getElementById("clearCartBtn");
   const checkoutBtn = document.getElementById("checkoutBtn");
+  const accountBtn = document.getElementById("accountButton");
+
+  accountBtn.addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
 
   searchInput.addEventListener("input", debounce(e => {
     state.filters.search = e.target.value.trim().toLowerCase();
