@@ -15,11 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toolbar.classList.toggle("hidden");
   });
 
-  // Toolbar bezárása, ha valamit kiválasztunk
-  toolbar.addEventListener("change", () => {
-    toolbar.classList.add("hidden");
-  });
-
   // Toolbar bezárása, ha a keresés inputon ENTER-t nyomunk
   const searchInput = document.getElementById("searchInput");
   if (searchInput) {
