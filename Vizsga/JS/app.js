@@ -144,7 +144,8 @@ function mountEvents() {
   });
 
   checkoutBtn.addEventListener("click", () => {
-    alert("Pénztár demó: itt jönne a rendelés leadása. (Integráció később.)");
+    // Navigáljunk a pénztár oldalra — a checkout.html a kosár adatokat a localStorage-ból olvassa
+    window.location.href = 'checkout.html';
   });
 
   // Kosár bezárása, ha az oldal bármelyik pontjára kattintunk
