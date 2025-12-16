@@ -1,16 +1,16 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ez a sablon egy minimális beállítást ad a React futtatásához Vite alatt, HMR támogatással és néhány ESLint szabállyal.
 
-Currently, two official plugins are available:
+Jelenleg két hivatalos plugin érhető el:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) a Fast Refresh-hez [Babel]-t használ (vagy [oxc]-et, ha [rolldown-vite]-val használják)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) a Fast Refresh-hez [SWC]-t használ
 
-## React Compiler
+## React fordító
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ez a sablon nem engedélyezi a React fordítót a fejlesztési és build teljesítményre gyakorolt hatása miatt. Ha szeretnéd hozzáadni, lásd ezt a [dokumentációt](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+## ESLint konfiguráció bővítése
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Ha éles alkalmazást fejlesztesz, ajánlott a TypeScript használata típusérzékeny lint szabályokkal. Nézd meg a [TS sablont](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) további információkért a TypeScript és a [`typescript-eslint`](https://typescript-eslint.io) integrálásáról a projektedbe.

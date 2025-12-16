@@ -318,5 +318,11 @@
       document.getElementById('payment-paypal').style.display='none';
     })();
   </script>
+  <script>
+    // Frissítéskor mindig a főoldalra tér vissza
+    if (performance.getEntriesByType('navigation')[0].type === 'reload') {
+      window.location.href = 'index.html';
+    }
+  </script>
 </body>
 </html>

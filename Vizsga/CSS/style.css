@@ -61,12 +61,13 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 
 @media (max-width: 600px) {
   /* On very small screens make the toolbar wrap instead of hiding controls */
+  /* Nagyon kis képernyőkön a toolbar-t sorba rendezzük a vezérlők elrejtése helyett */
   .toolbar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
   .toolbar input { flex: 1 1 100%; min-width: 160px; }
   .toolbar select { display: inline-block; flex: 1 1 140px; min-width: 110px; }
   .toolbar button { padding: 8px 10px; font-size: 0.9rem; flex: 0 0 auto; }
 
-  /* Keep the ability to hide the toolbar when the .hidden class is applied */
+  /* Megőrizzük a lehetőséget a toolbar elrejtésére, amikor a .hidden osztály alkalmazva van */
   .toolbar.hidden { display: none; }
 }
 
@@ -118,13 +119,13 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .modal-header button { background: transparent; border: none; color: var(--text); font-size: 24px; cursor: pointer; }
 #cartItems {
   padding: 12px 16px;
-  /* use flex column so items stack from the top and scrolling behaves predictably */
+  /* használjunk flex oszlopot, hogy az elemek a tetejétől egymás alá rendeződjenek és a görgetés kiszámítható legyen */
   display: flex;
   flex-direction: column;
   gap: 10px;
   flex: 1;
   overflow: auto;
-  justify-content: flex-start; /* ensure items start at the top */
+  justify-content: flex-start; /* biztosítja, hogy az elemek a tetején kezdődjenek */
 }
 .cart-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center; }
 .cart-item img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }

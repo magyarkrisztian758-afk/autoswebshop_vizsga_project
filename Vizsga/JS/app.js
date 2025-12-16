@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 async function loadData() {
-    // DATA/data.json betöltése
+  // DATA/data.json betöltése
   const res = await fetch("DATA/data.json");
   const data = await res.json();
   state.products = Array.isArray(data) ? data : [];
@@ -231,7 +231,7 @@ function renderProducts() {
 }
 
 function addToCart(product) {
-  // Ensure newly added or updated items appear at the top of the cart
+  // Biztosítja, hogy az újonnan hozzáadott vagy frissített tételek a kosár tetején jelenjenek meg
   const idx = state.cart.findIndex(i => i.id === product.id);
   if (idx !== -1) {
     // existing item: increase qty (respect stock) and move to top
@@ -276,7 +276,7 @@ function toggleCart() {
   if (modal.classList.contains("hidden")) {
     renderCart();
     modal.classList.remove("hidden");
-    // ensure cart scroll is at top when opened (after paint)
+    // biztosítja, hogy a kosár görgetése a tetején legyen megnyitáskor (a festés után)
     const wrap = document.getElementById("cartItems");
     if (wrap) requestAnimationFrame(() => { wrap.scrollTop = 0; });
   } else {
@@ -359,7 +359,7 @@ function renderCart() {
     try {
       wrap.scrollTop = 0;
     } catch (e) {
-      // ignore
+      // figyelmen kívül hagyjuk a hibát
     }
   });
 }
@@ -420,6 +420,6 @@ function saveCart() {
     if (state.lastAddedId) localStorage.setItem("cartLastAdded", String(state.lastAddedId));
     else localStorage.removeItem("cartLastAdded");
   } catch (e) {
-    // ignore storage errors
+    // figyelmen kívül hagyjuk a tárolási hibákat
   }
 }

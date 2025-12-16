@@ -39,6 +39,8 @@
 
   <main class="container">
     <section id="products" class="grid"></section>
+  <!-- React fogadó elem: a React alkalmazás ide renderelődik a build után -->
+  <div id="react-root"></div>
   </main>
 
   <div id="cartModal" class="modal hidden">
@@ -85,6 +87,11 @@
       window.location.href = 'index.html';
     }
   </script>
+  <!-- React csomag (buildelt) — a `Vizsga/react` mappában végrehajtott build hozza létre -->
+  <!-- A build futtatása után ezek a fájlok megjelennek a `react-dist/assets/` mappában -->
+  <link rel="stylesheet" href="react-dist/assets/index2.css" />
+  <script src="react-dist/assets/main.js" defer></script>
+
   <script src="JS/app.js"></script>
   <script src="JS/card.js"></script>
   <script src="JS/navbar-toggle.js"></script>
